@@ -19,9 +19,21 @@
 }
 
 .square {
+    text-align: center;
+    border: 1px solid;
+}
+
+.square-easy {
     flex-basis: calc((100% / 10) * 1);
     max-width: calc((100% / 10) * 1);
-    text-align: center;
-    line-height: 300%;
-    border: 1px solid;
+}
+
+.square-medium {
+    flex-basis: calc((100% / 9) * 1);
+    max-width: calc((100% / 9) * 1);
+}
+
+.square-hard {
+    flex-basis: calc((100% / 7) * 1);
+    max-width: calc((100% / 7) * 1);
 }
