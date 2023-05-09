@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-container {
+    background-color: #4ef5df;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 50px 0px;
+    width: 600px;
+    height: 600px;
+}
+
+.square {
+    flex-basis: calc((100% / 10) * 1);
+    max-width: calc((100% / 10) * 1);
+    text-align: center;
+    line-height: 300%;
+    border: 1px solid;
+}
