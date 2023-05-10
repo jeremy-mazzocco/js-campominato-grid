@@ -18,7 +18,7 @@ selectButton.addEventListener('click',
         }
 
         // Cicla per 100 volte le seguenti operazioni
-        for (let i = 1; i < numeroDiCelle + 1; i++) {
+        for (let i = 1; i <= numeroDiCelle; i++) {
 
             // Crea un elemento
             const createSquare = document.createElement('div');
@@ -30,8 +30,9 @@ selectButton.addEventListener('click',
             const selectContainer = document.querySelector('.container');
             selectContainer.append(createSquare);
 
-            // scrivi all'interno dell'elemento
-            createSquare.innerHTML += i;
+            // scrivi il numero all'interno dell'elemento
+            let numeroNellaCella = i;
+            createSquare.innerHTML += numeroNellaCella;
 
             // BONUS: in base al livello selezionato: cambia la classe
             if (livelloSelezionato === "Easy") {
@@ -41,10 +42,19 @@ selectButton.addEventListener('click',
             } else if (livelloSelezionato === "Hard") {
                 createSquare.classList.add('square-hard');
             }
+            // colora la cella al click
+            createSquare.addEventListener('click',
+                function () {
+                    createSquare.style.backgroundColor = 'blue';
+                });
         }
     }
-)
+);
 
+
+
+
+//  MY FUNCTIONS
 
 
 
