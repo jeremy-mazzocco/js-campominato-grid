@@ -1,5 +1,4 @@
-// BONUS: Prendi il livello di difficolta dal DOM e settalo in una variabile
-const livelloSelezionato = document.getElementById('difficolta').value;
+const selectContainer = document.querySelector('.container');
 
 // Aggiungo funzionalita' al click del Bottone
 const selectButton = document.getElementById('btn');
@@ -7,6 +6,12 @@ selectButton.addEventListener('click',
     function () {
         let numeroDiCelle;
         // const numeroDiCelle = 100;
+
+        // svuota container
+        selectContainer.innerHTML = " ";
+
+        // BONUS: Prendi il livello di difficolta dal DOM e settalo in una variabile
+        const livelloSelezionato = document.getElementById('difficolta').value;
 
         // BONUS: in base al livello selezionato: assegna il giusto valore alla variabile numeroDiCelle
         if (livelloSelezionato === "Easy") {
@@ -27,12 +32,11 @@ selectButton.addEventListener('click',
             createSquare.classList.add('square');
 
             // appendilo al container
-            const selectContainer = document.querySelector('.container');
             selectContainer.append(createSquare);
 
             // scrivi il numero all'interno dell'elemento
             let numeroNellaCella = i;
-            createSquare.innerHTML += numeroNellaCella;
+            createSquare.innerHTML = numeroNellaCella;
 
             // BONUS: in base al livello selezionato: cambia la classe
             if (livelloSelezionato === "Easy") {
@@ -46,6 +50,7 @@ selectButton.addEventListener('click',
             createSquare.addEventListener('click',
                 function () {
                     createSquare.style.backgroundColor = 'blue';
+                    console.log(numeroNellaCella);
                 });
         }
     }
